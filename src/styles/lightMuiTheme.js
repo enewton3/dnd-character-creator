@@ -1,13 +1,17 @@
-import { deepOrange, grey, pink } from "@mui/material/colors";
-import { createTheme } from "@mui/system";
+import { createTheme } from "@mui/material/styles";
 
 const lightMuiTheme = createTheme({
-  type: "light",
   palette: {
-    mode: "light",
-    primary: { main: deepOrange },
-    secondary: { main: pink },
-    // background: { default: grey },
+    type: "light",
+    primary: {
+      main: "#fb8c00",
+    },
+    secondary: {
+      main: "#f50057",
+    },
+  },
+  typography: {
+    fontFamily: "Play",
   },
 });
 
