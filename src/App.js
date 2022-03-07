@@ -9,23 +9,28 @@ import MyCharacters from "./screens/MyCharacters";
 import NotFound from "./screens/NotFound";
 import SignIn from "./screens/SignIn";
 import SignUp from "./screens/SignUp";
+import { useUserData } from "./services/hooks";
+import { UserContext } from "./services/UserContext";
 import { lightMuiTheme } from "./styles";
 
 function App() {
+  const userData = useUserData();
   return (
     <div className="App">
       <ThemeProvider theme={lightMuiTheme}>
-        <Layout>
-          <Routes>
-            <Route index element={<Home />} />
-            <Route path="/character-create" element={<CharacterCreate />} />
-            <Route path="/my-characters" element={<MyCharacters />} />
-            <Route path="/sign-in" element={<SignIn />} />
-            <Route path="/sign-up" element={<SignUp />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </Layout>
-        <Toaster />
+        <UserContext.Provider value={userData}>
+          <Layout>
+            <Routes>
+              <Route index element={<Home />} />
+              <Route path="/character-create" element={<CharacterCreate />} />
+              <Route path="/my-characters" element={<MyCharacters />} />
+              <Route path="/sign-in" element={<SignIn />} />
+              <Route path="/sign-up" element={<SignUp />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </Layout>
+          <Toaster position="bottom-right" reverseOrder={false} />
+        </UserContext.Provider>
       </ThemeProvider>
     </div>
   );

@@ -1,10 +1,7 @@
 import { Button, Input, Select } from "@mui/material";
-import React, { useState } from "react";
-import characterObject from "../../services/characterSchema";
 
-export default function NewCharacterForm() {
-  const [character, setCharacter] = useState({ ...characterObject });
 
+export default function NewCharacterForm({ character, setCharacter }) {
   return (
     <form>
       {/* name */}
