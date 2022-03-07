@@ -1,5 +1,4 @@
-import React from "react";
-import Layout from "../components/shared/Layout";
+import React, { useState } from "react";
 
 export default function Home() {
   return <div>HOME</div>;

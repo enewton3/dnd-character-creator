@@ -1,0 +1,240 @@
+{
+  "name": "S-DJ7",
+  "id": "437ceca8-fa1f-413b-ba17-ae0018183bc0",
+  "userId": "70fdd6d2-c562-478b-b075-c50c07a5b6f5",
+  "builderVersion": "0.5.19",
+  "image": "https://www.chrisleathers.com/source/images3d/zoom_droid/droid_02.jpg",
+  "user": "",
+  "experiencePoints": 3600,
+  "species": {
+    "name": "Droid, Class III",
+    "abilityScoreImprovementSelectedOption": 0,
+    "abilityScoreImprovement": { "Intelligence": 1 }
+  },
+  "classes": [
+    {
+      "name": "Engineer",
+      "levels": 4,
+      "hitPoints": [8, 5, 4],
+      "abilityScoreImprovements": [
+        {
+          "type": "Ability Score Improvement",
+          "abilitiesIncreased": [
+            { "name": "Wisdom", "value": 1 },
+            { "name": "Strength", "value": 1 }
+          ]
+        }
+      ],
+      "techPowers": [
+        "Combustive Shot",
+        "Electroshock",
+        "Mending",
+        "Pressure Crush",
+        "Tactical Barrier",
+        "Stack the Deck",
+        "Homing Rockets",
+        "Mirror Image",
+        "Kolto Dispenser",
+        "Electromesh"
+      ],
+      "archetype": { "name": "Gadgeteer Engineering" }
+    }
+  ],
+  "baseAbilityScores": {
+    "Strength": 10,
+    "Dexterity": 12,
+    "Constitution": 13,
+    "Intelligence": 13,
+    "Wisdom": 9,
+    "Charisma": 8
+  },
+  "background": {
+    "name": "Farmer",
+    "feat": { "name": "Techie", "type": "Feat" },
+    "feature": ""
+  },
+  "characteristics": {
+    "alignment": "Lawful Balanced",
+    "Personality Traits": "I have encyclopedic knowledge of any subject, but the only things you'll ever hear about are kelp farming.",
+    "Ideal": "I will protect and continue to stay with my travel companions so long as they continue to align with my objectives",
+    "Bond": "I am loyal only to my owner and their family, whom I am programmed to never harm.",
+    "Flaw": "I take things extremely literally as I am a droid. I don't necessarily think super creatively, preferring a heads-on efficient approach.",
+    "Gender": "Masculine programming",
+    "Place of Birth": "Droid Factories of Affa",
+    "Age": "5",
+    "Height": "1.79 meters",
+    "Weight": "75kg",
+    "Hair": "None",
+    "Eyes": "One black photoreceptor",
+    "Skin": "Metal",
+    "Appearance": "White plating",
+    "Backstory": "Purchased and owned by a kelp farmer on Mon Cala, when the Empire took over I was reprogrammed to serve as a bodyguard for the family. When it was decided that they needed more money, I was given additional programming for self reliance and personal maintenance. I was sent out to find and finish jobs.  I contain a lot of programmed and learned personality from my owner including some witty banter, their industry knowledge, and all of my engineering and repair abilities."
+  },
+  "credits": 1344,
+  "equipment": [
+    {
+      "name": "Blaster carbine",
+      "quantity": 1,
+      "category": "Equipment",
+      "equipped": false
+    },
+    { "name": "Power cell", "quantity": "2", "category": "Equipment" },
+    { "name": "Backpack", "quantity": 1, "category": "Equipment" },
+    { "name": "Glowrod", "quantity": "5", "category": "Equipment" },
+    { "name": "Fusion cutter", "quantity": 1, "category": "Equipment" },
+    { "name": "Grappling hook", "quantity": 1, "category": "Equipment" },
+    { "name": "Chronometer", "quantity": 1, "category": "Equipment" },
+    {
+      "name": "Field rations (one day's)",
+      "quantity": "10",
+      "category": "Equipment"
+    },
+    { "name": "Canteen", "quantity": 1, "category": "Equipment" },
+    {
+      "name": "Fibercord cable, 50 ft (rolled)",
+      "quantity": 1,
+      "category": "Equipment"
+    },
+    {
+      "name": "Combat suit",
+      "quantity": 1,
+      "category": "Equipment",
+      "equipped": true
+    },
+    { "name": "Tinker's implements", "quantity": 1, "category": "Equipment" },
+    {
+      "name": "Vibrodagger",
+      "quantity": 1,
+      "category": "Equipment",
+      "equipped": false
+    },
+    { "name": "Wristpad", "quantity": 1, "category": "Equipment" },
+    {
+      "name": "Armormech's implements",
+      "quantity": 1,
+      "category": "Equipment"
+    },
+    { "name": "Clothes, common", "quantity": 1, "category": "Equipment" },
+    { "name": "Pouch", "quantity": 1, "category": "Equipment" },
+    { "name": "Sentry", "quantity": 1, "category": "EnhancedItem" },
+    { "name": "Headcomm", "quantity": 1, "category": "Equipment" },
+    { "name": "Restraining bolt", "quantity": 1, "category": "Equipment" },
+    {
+      "name": "Energy bow",
+      "quantity": 1,
+      "category": "Equipment",
+      "equipped": true
+    },
+    { "name": "Datapad", "quantity": "2", "category": "Equipment" },
+    { "name": "Code cylinder", "quantity": 1, "category": "Equipment" },
+    { "name": "Commlink", "quantity": 1, "category": "Equipment" },
+    {
+      "name": "Gadgeteer's implements",
+      "quantity": 1,
+      "category": "Equipment"
+    },
+    { "name": "Jetpack", "quantity": 1, "category": "Equipment" },
+    {
+      "name": "Wrist-Mounted Grappling Hook",
+      "quantity": 1,
+      "category": "EnhancedItem"
+    }
+  ],
+  "currentStats": {
+    "hitPointsLost": 0,
+    "temporaryHitPoints": 0,
+    "techPointsUsed": 0,
+    "forcePointsUsed": 0,
+    "superiorityDiceUsed": 0,
+    "hitDiceUsed": { "d8": 0 },
+    "deathSaves": { "successes": 0, "failures": 0 },
+    "hasInspiration": false,
+    "featuresTimesUsed": {},
+    "conditions": [],
+    "exhaustion": 0,
+    "highLevelCasting": {
+      "level6": false,
+      "level7": false,
+      "level8": false,
+      "level9": false
+    },
+    "unspentLevels": 1
+  },
+  "tweaks": {
+    "abilityScores": {
+      "Intelligence": {
+        "skills": {
+          "Technology": { "proficiency": "Expertise" },
+          "Lore": { "proficiency": "Expertise" },
+          "Piloting": { "proficiency": "Proficient" }
+        }
+      },
+      "Charisma": {
+        "skills": { "Persuasion": { "proficiency": "Proficient" } }
+      },
+      "Wisdom": {
+        "skills": { "Animal Handling": { "proficiency": "Proficient" } }
+      },
+      "Strength": { "score": { "bonus": 1, "override": null } }
+    },
+    "hitPoints": { "maximum": { "override": 21, "bonus": null } },
+    "speed": { "base": { "override": 25, "bonus": null } }
+  },
+  "customProficiencies": [],
+  "customLanguages": [],
+  "customFeatures": [],
+  "customFeats": [],
+  "customTechPowers": ["Alarm"],
+  "customForcePowers": [],
+  "customEquipment": [
+    {
+      "name": "Sturdy Knife",
+      "quantity": 1,
+      "equipmentCategory": "Weapon",
+      "cost": 0,
+      "description": "",
+      "weight": 1,
+      "damageType": "Kinetic",
+      "damageNumberOfDice": 1,
+      "tweaks": {
+        "toHit": { "override": 0 },
+        "damageDice": { "dieSize": 4 },
+        "damage": { "override": 0 }
+      },
+      "equipped": false
+    },
+    {
+      "name": "Built in Music Recorder",
+      "quantity": 1,
+      "equipmentCategory": "Gear",
+      "cost": 0,
+      "description": "",
+      "weight": 1
+    },
+    {
+      "name": "Communications Mod",
+      "quantity": 1,
+      "equipmentCategory": "Gear",
+      "cost": 0,
+      "description": "",
+      "weight": 1
+    },
+    {
+      "name": "Vantablack Cloak",
+      "quantity": 1,
+      "equipmentCategory": "Gear",
+      "cost": 0,
+      "description": "",
+      "weight": 1
+    }
+  ],
+  "settings": {
+    "isEnforcingForcePrerequisites": true,
+    "isFixedHitPoints": false,
+    "abilityScoreMethod": "Manual"
+  },
+  "notes": "Money Sent home:  300 5/3\n\nDroid Mod Slots\nMod 1 - A headcomm can be installed in a helmet or worn independently. It functions as a hands-free commlink.\nCommlinks are standard handheld communication devices, fitted with microphones and receivers. Standard, personal commlinks have a range of up to 30 miles, but are reduced in dense, urban areas or areas of high level interference.\nMod 2 -\nMod 3 -\n\nPlans for Imperial Shuttle\n\nOfficer that we knocked out and then yeeted - 22226\n\nPotent aptitude die - 0/2\n\nEngineer harness mod slots - \nMod 1 - Jet Pack\nMod 2 - Wrist Mounted Grappling Hook\nMod 3 - Sentry Turret\nMod 4 - ",
+  "createdAt": 1617994849714,
+  "changedAt": 1631490183504,
+  "localId": "temp-mpc6xb98r"
+}

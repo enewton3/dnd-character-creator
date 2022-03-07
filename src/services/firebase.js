@@ -1,11 +1,15 @@
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { initializeApp, getApps, getApp } from "firebase/app";
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
+import {
+  getFirestore,
+  collection,
+  where,
+  getDocs,
+  query,
+  limit,
+} from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
   apiKey: "AIzaSyBTQlVCPcPuVvkprNimHRqqkfHmb_KPmxg",
   authDomain: "dnd-character-creator-97e68.firebaseapp.com",
@@ -16,6 +20,40 @@ const firebaseConfig = {
   measurementId: "G-383GLW9M6E",
 };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
+function createFirebaseApp(config) {
+  try {
+    return getApp();
+  } catch {
+    return initializeApp(config);
+  }
+}
+
+const firebaseApp = createFirebaseApp(firebaseConfig);
+
+export const auth = getAuth(firebaseApp);
+export const googleAuthProvider = new GoogleAuthProvider();
+
+export const firestore = getFirestore(firebaseApp);
+
+export const storage = getStorage(firebaseApp);
+export const STATE_CHANGED = "state_changed";
+
+export async function getUserWithUsername(username) {
+  const q = query(
+    collection(firestore, "users"),
+    where("username", "==", username),
+    limit(1)
+  );
+  const userDoc = await getDocs(q).docs[0];
+  return userDoc;
+}
+
+export function docToJSON(doc) {
+  const data = doc.data();
+
+  return {
+    ...data,
+    createdAt: data?.createdAt.toMillis() || 0,
+    updatedAt: data?.updatedAt.toMillis() || 0,
+  };
+}

@@ -1,4 +1,5 @@
 import { ThemeProvider } from "@mui/styles";
+import { Toaster } from "react-hot-toast";
 import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Layout from "./components/shared/Layout";
@@ -10,7 +11,7 @@ import SignIn from "./screens/SignIn";
 import SignUp from "./screens/SignUp";
 import { lightMuiTheme } from "./styles";
 
-function App({ children }) {
+function App() {
   return (
     <div className="App">
       <ThemeProvider theme={lightMuiTheme}>
@@ -24,6 +25,7 @@ function App({ children }) {
             <Route path="*" element={<NotFound />} />
           </Routes>
         </Layout>
+        <Toaster />
       </ThemeProvider>
     </div>
   );

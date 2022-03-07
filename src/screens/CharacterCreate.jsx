@@ -1,6 +1,13 @@
+import { Paper } from "@mui/material";
 import React from "react";
-import Layout from "../components/shared/Layout";
+import NewCharacterForm from "../components/CharacterCreate/NewCharacterForm";
 
 export default function CharacterCreate() {
-  return <div>Create a Character</div>;
+  return (
+    <div>
+      {/* <Paper>
+        <NewCharacterForm />
+      </Paper> */}
+    </div>
+  );
 }
