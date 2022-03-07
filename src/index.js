@@ -3,17 +3,15 @@ import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { BrowserRouter as Router } from "react-router-dom";
-import { ThemeProvider } from "@mui/material";
-import lightMuiTheme from "./styles/lightMuiTheme";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 ReactDOM.render(
   <React.StrictMode>
-    <ThemeProvider theme={lightMuiTheme}>
-      <Router>
-        <App />
-      </Router>
-    </ThemeProvider>
+    <Router>
+      <Routes>
+        <Route path="*" element={<App />} />
+      </Routes>
+    </Router>
   </React.StrictMode>,
   document.getElementById("root")
 );

@@ -1,23 +1,30 @@
-import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { useState } from "react";
-import lightMuiTheme from "./styles/lightMuiTheme";
+import { ThemeProvider } from "@mui/styles";
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Layout from "./components/shared/Layout";
-import { Route, Routes, useHistory } from "react-router-dom";
-import { AppBar, Button, IconButton, Toolbar, Typography } from "@mui/material";
-import { Box } from "@mui/system";
-import { deepOrange, pink } from "@mui/material/colors";
+import CharacterCreate from "./screens/CharacterCreate";
+import Home from "./screens/Home";
+import MyCharacters from "./screens/MyCharacters";
+import NotFound from "./screens/NotFound";
+import SignIn from "./screens/SignIn";
+import SignUp from "./screens/SignUp";
+import { lightMuiTheme } from "./styles";
 
-function App() {
+function App({ children }) {
   return (
     <div className="App">
-      <Layout>
-        <Routes>
-          <Route path="/">Home Page</Route>
-          <Route path="/character-create">Character Creation Page</Route>
-          <Route path="/my-characters">My Characters</Route>
-        </Routes>
-      </Layout>
+      <ThemeProvider theme={lightMuiTheme}>
+        <Layout>
+          <Routes>
+            <Route index element={<Home />} />
+            <Route path="/character-create" element={<CharacterCreate />} />
+            <Route path="/my-characters" element={<MyCharacters />} />
+            <Route path="/sign-in" element={<SignIn />} />
+            <Route path="/sign-up" element={<SignUp />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </Layout>
+      </ThemeProvider>
     </div>
   );
 }
