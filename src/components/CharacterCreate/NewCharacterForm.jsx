@@ -1,35 +1,29 @@
-import { Button, Input, Select } from "@mui/material";
-
+import {
+  Autocomplete,
+  Button,
+  Grid,
+  Input,
+  Select,
+  TextField,
+} from "@mui/material";
+import AbilityMods from "./AbilityMods";
+import ActionButtons from "./ActionButtons";
+import TopSection from "./TopSection";
 
 export default function NewCharacterForm({ character, setCharacter }) {
   return (
     <form>
-      {/* name */}
-      <div>
-        <Input />
-        <Input />
-      </div>
-      {/* first section */}
-      <div>
-        {/* class select */}
-        <Select></Select>
-        {/* background select */}
-        <Select></Select>
-        {/* Player name */}
-        <Input />
-        {/* race select */}
-        <Select></Select>
-        {/* Alignment select */}
-        <Select></Select>
-      </div>
-      {/* options */}
-      <div></div>
+      <Grid container spacing={2}>
+        {/* name */}
+        <Grid item xs={8}>
+          <TopSection />
+        </Grid>
 
-      {/* action buttons */}
-      <div>
-        <Button variant="outlined">Save</Button>
-        <Button variant="outlined">Print Sheet</Button>
-      </div>
+        <AbilityMods />
+
+        {/* action buttons */}
+        <ActionButtons />
+      </Grid>
     </form>
   );
 }

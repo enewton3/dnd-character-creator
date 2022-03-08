@@ -4,6 +4,7 @@ import { auth, googleAuthProvider } from "../../services/firebase";
 import { signInWithPopup } from "firebase/auth";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
+import GoogleIcon from "@mui/icons-material/Google";
 
 export default function GoogleSignInButton() {
   const navigate = useNavigate();
@@ -18,5 +19,9 @@ export default function GoogleSignInButton() {
     }
   };
 
-  return <Button onClick={signInWithGoogle}>Sign In with Google</Button>;
+  return (
+    <Button variant="outlined" onClick={signInWithGoogle}>
+      <GoogleIcon sx={{ fontSize: 35, paddingRight: 2 }} /> Sign In with Google
+    </Button>
+  );
 }

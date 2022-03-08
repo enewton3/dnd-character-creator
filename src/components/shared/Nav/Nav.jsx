@@ -17,7 +17,6 @@ export default function Nav() {
     setAnchorEl(null);
   };
 
-  console.log(anchorEl);
   return (
     <AppBar
       sx={{
