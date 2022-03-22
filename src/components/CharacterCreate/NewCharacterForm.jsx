@@ -4,14 +4,9 @@ import ActionButtons from "./ActionButtons";
 import TopSection from "./TopSection";
 
 export default function NewCharacterForm(props) {
-  const {
-    character,
-    setCharacter,
-    handleSave,
-    handleChange,
-    optionChange,
-    handleAbilityModChange,
-  } = props;
+  const { character, setCharacter, handleSave, handleChange, optionChange } =
+    props;
+
   return (
     <Grid container spacing={1} sx={{ width: "100%", marginTop: "1vh" }}>
       <Grid item xs={12}>
@@ -22,10 +17,7 @@ export default function NewCharacterForm(props) {
         />
       </Grid>
       <Grid item xs={12}>
-        <AbilityMods
-          handleAbilityModChange={handleAbilityModChange}
-          character={character}
-        />
+        <AbilityMods character={character} setCharacter={setCharacter} />
       </Grid>
       <Grid item xs={12}>
         <ActionButtons handleSave={handleSave} />

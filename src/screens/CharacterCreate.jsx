@@ -18,14 +18,6 @@ export default function CharacterCreate() {
     setCharacter((prev) => ({ ...prev, [label]: value }));
   };
 
-  const handleAbilityModChange = (mod, value) => {
-    const { mods } = character;
-    const indexOfMod = mods.indexOf(mod);
-    const newMods = [...mods];
-    newMods[indexOfMod] = value;
-    setCharacter((prev) => ({ ...character, mods: newMods }));
-  };
-
   return (
     <NewCharacterForm
       character={character}
@@ -33,7 +25,6 @@ export default function CharacterCreate() {
       handleSave={handleSave}
       handleChange={handleChange}
       optionChange={optionChange}
-      handleAbilityModChange={handleAbilityModChange}
     />
   );
 }

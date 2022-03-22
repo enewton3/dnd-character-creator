@@ -5,23 +5,45 @@ import {
   TextField,
 } from "@mui/material";
 import { Box } from "@mui/system";
-import React, { useEffect, useState } from "react";
+import React from "react";
 
 export default function ModsInput(props) {
-  const { mod, handleAbilityModChange } = props;
-
-  const [newMod, setNewMod] = useState(mod);
-
-  const handleChange = (e) => {
-    const { value, name } = e.target;
-    console.log(value, name);
-    setNewMod((prev) => ({ ...prev, [name]: value }));
-  };
+  const { mod, setCharacter, character } = props;
 
   const handleCheckedChange = (e) => {
-    const { name, checked } = e.target;
-    console.log(name, checked);
-    setNewMod((prev) => ({ ...prev, [name]: checked }));
+    const newMod = {
+      name: mod.name,
+      value: mod.value,
+      prof: !mod.prof,
+      shortName: mod.shortName,
+    };
+
+    const mods = character.mods;
+    const modIndex = mods.indexOf(mod);
+    mods.splice(modIndex, 1, newMod);
+
+    const newCharacter = { ...character, mods: mods };
+
+    setCharacter((prev) => newCharacter);
+  };
+
+  const handleChange = (e) => {
+    const { value } = e.target;
+
+    const newMod = {
+      name: mod.name,
+      value: value,
+      prof: mod.prof,
+      shortName: mod.shortName,
+    };
+
+    const mods = character.mods;
+    const modIndex = mods.indexOf(mod);
+
+    mods.splice(modIndex, 1, newMod);
+
+    const newCharacter = { ...character, mods: mods };
+    setCharacter((prev) => newCharacter);
   };
 
   return (
@@ -36,7 +58,7 @@ export default function ModsInput(props) {
         <FormControlLabel
           control={
             <Checkbox
-              checked={newMod.prof}
+              checked={mod.prof}
               size="small"
               onChange={(e) => handleCheckedChange(e)}
               name="prof"

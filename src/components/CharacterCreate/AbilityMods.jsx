@@ -1,8 +1,8 @@
-import { Grid, TextField } from "@mui/material";
+import { Grid } from "@mui/material";
 import React from "react";
 import ModsInput from "./Utils/ModsInput";
 
-export default function AbilityMods({ character, handleAbilityModChange }) {
+export default function AbilityMods({ character, setCharacter }) {
   const { mods } = character;
 
   return (
@@ -11,7 +11,9 @@ export default function AbilityMods({ character, handleAbilityModChange }) {
         <Grid item key={mod.name}>
           <ModsInput
             mod={mod}
-            handleAbilityModChange={handleAbilityModChange}
+            // handleAbilityModChange={handleAbilityModChange}
+            setCharacter={setCharacter}
+            character={character}
           />
         </Grid>
       ))}
