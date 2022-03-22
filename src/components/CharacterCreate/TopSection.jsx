@@ -1,46 +1,106 @@
 import React from "react";
-import { Autocomplete, Paper, TextField } from "@mui/material";
+import { Box, Grid, Paper, TextField } from "@mui/material";
+import OptionsAutocomplete from "./Utils/OptionsAutocomplete";
+import {
+  alignments,
+  backgrounds,
+  classes,
+  races,
+} from "../../services/characterResources";
 
-export default function TopSection() {
+export default function TopSection({ handleChange, character, optionChange }) {
   return (
     <Paper
       sx={{
-        width: "75vw",
+        width: "95%",
         display: "flex",
-        flexFlow: "row wrap",
+        margin: "0 auto",
+        justifyContent: "space-around",
         alignItems: "center",
-        justifyContent: "center",
+        padding: "2vh 1vw 2vh 1vw",
       }}
     >
-      <div>
-        <TextField label="Character First Name" />
-        <TextField label="Character Last Name" />
-      </div>
+      <Box
+        sx={{
+          width: "33%",
+          display: "flex",
+          flexFlow: "column wrap",
+          margin: "0 1vw 0 0 ",
+          // justifyContent: "space-between",
+        }}
+      >
+        <TextField
+          label="Character First Name"
+          name="firstname"
+          onChange={(e) => handleChange(e)}
+          value={character.firstname}
+        />
+        <TextField
+          label="Character Last Name"
+          name="lastname"
+          onChange={(e) => handleChange(e)}
+          value={character.lastname}
+        />
+      </Box>
       {/* first section */}
-      <div>
+      <Grid
+        container
+        spacing={0.5}
+        direction="row"
+        justifyContent="center"
+        alignItems="center"
+      >
         {/* class select */}
-        <Autocomplete
-          options={[]}
-          renderInput={(params) => <TextField {...params} label="Class" />}
-        />
+        <Grid item xs={4}>
+          <OptionsAutocomplete
+            options={classes}
+            label="class"
+            value={character.class}
+            handleChange={handleChange}
+            optionChange={optionChange}
+          />
+        </Grid>
         {/* background select */}
-        <Autocomplete
-          options={[]}
-          renderInput={(params) => <TextField {...params} label="Background" />}
-        />
+        <Grid item xs={4}>
+          <OptionsAutocomplete
+            options={backgrounds}
+            label="background"
+            value={character.background}
+            handleChange={handleChange}
+            optionChange={optionChange}
+          />
+        </Grid>
         {/* Player name */}
-        <TextField label="Player Name" />
+        <Grid item xs={4}>
+          <TextField
+            label="Player Name"
+            name="playername"
+            fullWidth
+            onChange={(e) => handleChange(e)}
+            value={character.playername}
+          />
+        </Grid>
         {/* race select */}
-        <Autocomplete
-          options={[]}
-          renderInput={(params) => <TextField {...params} label="Race" />}
-        />
+        <Grid item xs={6}>
+          <OptionsAutocomplete
+            label="race"
+            options={races}
+            value={character.race}
+            handleChange={handleChange}
+            optionChange={optionChange}
+          />
+        </Grid>
         {/* Alignment select */}
-        <Autocomplete
-          options={[]}
-          renderInput={(params) => <TextField {...params} label="Alignment" />}
-        />
-      </div>
+        <Grid item xs={6}>
+          <OptionsAutocomplete
+            options={alignments}
+            label="alignment"
+            value={character.alignment}
+            handleChange={handleChange}
+            optionChange={optionChange}
+          />
+        </Grid>
+      </Grid>
     </Paper>
   );
 }

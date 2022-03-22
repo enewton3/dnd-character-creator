@@ -1,4 +1,4 @@
-import { Button, MenuItem } from "@mui/material";
+import { MenuItem } from "@mui/material";
 import { signOut } from "firebase/auth";
 import React from "react";
 import { auth } from "../../services/firebase";

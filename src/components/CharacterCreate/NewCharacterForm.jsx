@@ -1,29 +1,35 @@
-import {
-  Autocomplete,
-  Button,
-  Grid,
-  Input,
-  Select,
-  TextField,
-} from "@mui/material";
+import { Grid } from "@mui/material";
 import AbilityMods from "./AbilityMods";
 import ActionButtons from "./ActionButtons";
 import TopSection from "./TopSection";
 
-export default function NewCharacterForm({ character, setCharacter }) {
+export default function NewCharacterForm(props) {
+  const {
+    character,
+    setCharacter,
+    handleSave,
+    handleChange,
+    optionChange,
+    handleAbilityModChange,
+  } = props;
   return (
-    <form>
-      <Grid container spacing={2}>
-        {/* name */}
-        <Grid item xs={8}>
-          <TopSection />
-        </Grid>
-
-        <AbilityMods />
-
-        {/* action buttons */}
-        <ActionButtons />
+    <Grid container spacing={1} sx={{ width: "100%", marginTop: "1vh" }}>
+      <Grid item xs={12}>
+        <TopSection
+          handleChange={handleChange}
+          character={character}
+          optionChange={optionChange}
+        />
       </Grid>
-    </form>
+      <Grid item xs={12}>
+        <AbilityMods
+          handleAbilityModChange={handleAbilityModChange}
+          character={character}
+        />
+      </Grid>
+      <Grid item xs={12}>
+        <ActionButtons handleSave={handleSave} />
+      </Grid>
+    </Grid>
   );
 }
