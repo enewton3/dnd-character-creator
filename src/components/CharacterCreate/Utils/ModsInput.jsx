@@ -47,12 +47,20 @@ export default function ModsInput(props) {
   };
 
   return (
-    <Box>
+    <Box
+      sx={{
+        display: "flex",
+        flexFlow: "column wrap",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
       <TextField
         label={mod.name}
         inputProps={{ inputMode: "numeric", pattern: "[0-9]*" }}
         onChange={(e) => handleChange(e)}
         name="value"
+        // sx={{ width: "30%" }}
       />
       <FormGroup>
         <FormControlLabel

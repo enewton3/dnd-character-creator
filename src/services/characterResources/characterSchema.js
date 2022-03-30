@@ -11,6 +11,12 @@ const characterObject = {
   race: "",
   alignment: "",
   xp: "",
+  armorclass: "",
+  initiative: "",
+  speed: "",
+  hitdice: "",
+  hitpoints: "",
+  temphp: "",
   mods: [
     { name: "Strength", shortName: "str", value: "", prof: false },
     { name: "Dexterity", shortName: "dex", value: "", prof: false },
@@ -18,6 +24,12 @@ const characterObject = {
     { name: "Intelligence", shortName: "int", value: "", prof: false },
     { name: "Wisdom", shortName: "wis", value: "", prof: false },
     { name: "Charisma", shortName: "char", value: "", prof: false },
+  ],
+  characterInfo: [
+    { name: "Traits", content: "" },
+    { name: "Values", content: "" },
+    { name: "Flaws", content: "" },
+    { name: "Ideals", content: "" },
   ],
 };
 
