@@ -10,16 +10,6 @@ import {
 } from "firebase/firestore";
 import { getStorage } from "firebase/storage";
 
-const firebaseConfig = {
-  apiKey: "AIzaSyBTQlVCPcPuVvkprNimHRqqkfHmb_KPmxg",
-  authDomain: "dnd-character-creator-97e68.firebaseapp.com",
-  projectId: "dnd-character-creator-97e68",
-  storageBucket: "dnd-character-creator-97e68.appspot.com",
-  messagingSenderId: "21028074270",
-  appId: "1:21028074270:web:85c38fae04e12c56078f0f",
-  measurementId: "G-383GLW9M6E",
-};
-
 function createFirebaseApp(config) {
   try {
     return getApp();
