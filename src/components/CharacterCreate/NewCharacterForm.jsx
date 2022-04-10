@@ -1,8 +1,11 @@
 import { Grid, Typography } from "@mui/material";
 import AbilityMods from "./AbilityMods";
 import ActionButtons from "./ActionButtons";
+import AttacksAndSpellcasting from "./AttacksAndSpellcasting";
 import BackgroundInfo from "./BackgroundInfo";
 import CombatInfo from "./CombatInfo";
+import Equipment from "./Equipment";
+import OtherProfs from "./OtherProfs";
 import TopSection from "./TopSection";
 
 export default function NewCharacterForm(props) {
@@ -40,6 +43,23 @@ export default function NewCharacterForm(props) {
       </Grid>
       <Grid item xs={6}>
         <BackgroundInfo character={character} setCharacter={setCharacter} />
+      </Grid>
+      <Grid item xs={12}>
+        <AttacksAndSpellcasting
+          character={character}
+          setCharacter={setCharacter}
+        />
+      </Grid>
+      <Grid item xs={12}>
+        <Equipment character={character} setCharacter={setCharacter} />
+      </Grid>
+      <Grid item xs={12}>
+        <OtherProfs
+          handleChange={handleChange}
+          optionChange={optionChange}
+          character={character}
+          setCharacter={setCharacter}
+        />
       </Grid>
       <Grid item xs={12}>
         <ActionButtons handleSave={handleSave} />

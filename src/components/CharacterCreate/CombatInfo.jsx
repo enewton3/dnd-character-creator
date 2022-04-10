@@ -3,7 +3,7 @@ import React from "react";
 
 export default function CombatInfo({ handleChange, character }) {
   return (
-    <Grid container sx={{ width: "50%" }}>
+    <Grid container>
       <Grid item xs={6}>
         <TextField
           label="Armor Class"

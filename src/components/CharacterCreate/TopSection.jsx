@@ -58,6 +58,7 @@ export default function TopSection({ handleChange, character, optionChange }) {
             value={character.class}
             handleChange={handleChange}
             optionChange={optionChange}
+            selectMultiple={false}
           />
         </Grid>
         {/* background select */}
@@ -68,6 +69,7 @@ export default function TopSection({ handleChange, character, optionChange }) {
             value={character.background}
             handleChange={handleChange}
             optionChange={optionChange}
+            selectMultiple={false}
           />
         </Grid>
         {/* Player name */}
@@ -88,6 +90,7 @@ export default function TopSection({ handleChange, character, optionChange }) {
             value={character.race}
             handleChange={handleChange}
             optionChange={optionChange}
+            selectMultiple={false}
           />
         </Grid>
         {/* Alignment select */}
@@ -98,6 +101,7 @@ export default function TopSection({ handleChange, character, optionChange }) {
             value={character.alignment}
             handleChange={handleChange}
             optionChange={optionChange}
+            selectMultiple={false}
           />
         </Grid>
       </Grid>

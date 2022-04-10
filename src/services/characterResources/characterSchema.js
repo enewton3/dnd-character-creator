@@ -31,6 +31,48 @@ const characterObject = {
     { name: "Flaws", content: "" },
     { name: "Ideals", content: "" },
   ],
+  attacks: [
+    {
+      name: "Unarmed Strike",
+      bonus: "+3",
+      damage: "2 Kinetic",
+    },
+    {
+      name: "",
+      bonus: "",
+      damage: "",
+    },
+    {
+      name: "",
+      bonus: "",
+      damage: "",
+    },
+  ],
+  equipment: [
+    {
+      name: "Knife",
+      quantity: 1,
+      category: "Equipment",
+      equipped: false,
+      description: "",
+    },
+    {
+      name: "",
+      quantity: "",
+      category: "",
+      equipped: false,
+      description: "",
+    },
+    {
+      name: "",
+      quantity: "",
+      category: "",
+      equipped: false,
+      description: "",
+    },
+  ],
+  languages: ["", ""],
+  notes: "",
 };
 
 export default characterObject;
