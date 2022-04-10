@@ -38,7 +38,7 @@ export default function Nav() {
             aria-expanded={open ? "true" : undefined}
           >
             <Typography>{user.displayName}</Typography>
-            <Avatar alt={`${user.displayName}`}>{user.displayName[0]}</Avatar>
+            {/* <Avatar alt={`${user.displayName}`}>{user.displayName[0]}</Avatar> */}
           </div>
         ) : (
           <LoggedOutLinks />
