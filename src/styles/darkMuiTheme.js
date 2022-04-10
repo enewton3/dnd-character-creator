@@ -1,4 +1,4 @@
-import { deepOrange, pink } from "@mui/material/colors";
+// import { deepOrange, pink } from "@mui/material/colors";
 import { createTheme } from "@mui/material/styles";
 
 const darkMuiTheme = createTheme({

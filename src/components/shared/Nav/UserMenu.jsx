@@ -1,6 +1,5 @@
-import { Menu, MenuItem } from "@mui/material";
 import React from "react";
-import SignOutButton from "../../Auth/SignOutButton";
+import { Menu } from "@mui/material";
 import { LoggedInLinks } from "./NavLinks";
 
 export default function UserMenu({ handleClose, open, anchorEl }) {

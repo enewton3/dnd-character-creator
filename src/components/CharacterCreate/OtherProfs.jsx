@@ -4,8 +4,7 @@ import { languages } from "../../services/characterResources";
 import OptionsAutocomplete from "./Utils/OptionsAutocomplete";
 
 export default function OtherProfs(props) {
-  const { character, setCharacter, handleChange, optionChange } = props;
-  const languageChange = () => {};
+  const { character, handleChange, optionChange } = props;
 
   return (
     <Container>
